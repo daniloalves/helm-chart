@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    {{- include "data-prepper.labels" . | nindent 4 }}
+  name: {{ include "data-prepper.fullname" . }}-headless
+spec:
+  clusterIP: None
+  ports:
+    - name: {{ .Values.serviceHeadless.name }}
+      port: {{ .Values.serviceHeadless.port }}
+      targetPort: {{ .Values.serviceHeadless.targetPort }}
+  selector:
+    app: {{ include "data-prepper.fullname" . }}
+status:
+  loadBalancer: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    {{- include "data-prepper.labels" . | nindent 4 }}
+  name: {{ include "data-prepper.fullname" . }}-metrics
+spec:
+  type: {{ .Values.serviceMetrics.type }}
+  ports:
+    - name: {{ .Values.serviceMetrics.name }}
+      port: {{ .Values.serviceMetrics.port }}
+      targetPort: {{ .Values.serviceMetrics.port }}
+  selector:
+    app: {{ include "data-prepper.fullname" . }}
+status:
+  loadBalancer: {}

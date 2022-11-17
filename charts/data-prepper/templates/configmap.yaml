@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  labels:
+    {{- include "data-prepper.labels" . | nindent 4 }}
+  name: {{ include "data-prepper.fullname" . }}-config
+data:
+  pipelines.yaml: |
+    {{ toYaml .Values.config | indent 4 }}
+  data-prepper-config.yaml: |
+    {{ toYaml .Values.config | indent 4 }}
