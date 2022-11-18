@@ -25,6 +25,10 @@ serviceAccount:
 
 podAnnotations: {}
 
+livenessProbe: {}
+
+readinessProbe: {}
+
 podSecurityContext: {}
   # fsGroup: 2000
 

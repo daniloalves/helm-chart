@@ -3,9 +3,9 @@ entries:
   data-prepper:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-11-17T23:58:19.720922684-03:00"
+    created: "2022-11-18T01:24:10.242278162-03:00"
     description: A Helm chart for Kubernetes
-    digest: 3120bb2027fc7ca5973f25b9dae8c4796c8444509d723953932cd3bbdc416fd4
+    digest: e4ab2fd8417102b71563f7186c89dd1670b9dc47a20d3cf7f3843966effbcdc2
     name: data-prepper
     type: application
     urls:
@@ -13,7 +13,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-11-17T23:58:19.719355046-03:00"
+    created: "2022-11-18T01:24:10.241743461-03:00"
     description: A Helm chart for Kubernetes
     digest: eab5a53bf24bd5e25626678cfa26898becb39db1406a1e7d8ceec0751710f143
     name: data-prepper
@@ -21,4 +21,4 @@ entries:
     urls:
     - data-prepper-0.1.0.tgz
     version: 0.1.0
-generated: "2022-11-17T23:58:19.718723691-03:00"
+generated: "2022-11-18T01:24:10.240897163-03:00"
