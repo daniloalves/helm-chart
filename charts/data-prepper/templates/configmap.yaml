@@ -6,6 +6,6 @@ metadata:
   name: {{ include "data-prepper.fullname" . }}-config
 data:
   pipelines.yaml: |
-    {{ toYaml .Values.config | indent 4 }}
+    {{ toYaml .Values.pipelinesConfig | indent 4 }}
   data-prepper-config.yaml: |
-    {{ toYaml .Values.config | indent 4 }}
+    {{ toYaml .Values.dataPrepperConfig | indent 4 }}
